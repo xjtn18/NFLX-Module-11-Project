@@ -8,7 +8,6 @@ public class Person {
 	protected double _paid, _earned;
 
 
-
 	// Methods
 
 	public Person(String name, double paid) {
@@ -20,7 +19,6 @@ public class Person {
 		// pays this person their amount paid
 		_earned += _paid;
 	}
-
 
 
 	// Getters and Setters

@@ -7,14 +7,12 @@ public class Actor extends Person {
 	private String _role;
 
 
-
 	// Methods
 
 	public Actor(String name, double paid, String role){
 		super(name, paid);
 		_role = role;
 	}
-
 
 
 	// Getters + Setters

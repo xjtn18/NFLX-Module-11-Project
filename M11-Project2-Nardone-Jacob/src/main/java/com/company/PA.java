@@ -7,7 +7,6 @@ public class PA extends Crew {
 	private double _hours_worked;
 
 
-
 	// Methods
 
 	public PA(String name, double paid, double hours_worked){
@@ -19,7 +18,6 @@ public class PA extends Crew {
 	public void pay(){
 		_earned += _paid * _hours_worked; // hourly pay multiplied by total hours
 	}
-
 
 
 	// Getters + Setters

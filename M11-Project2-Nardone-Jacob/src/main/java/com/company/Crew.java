@@ -7,14 +7,12 @@ public class Crew extends Person {
 	private String _department;
 
 
-
 	// Methods
 
 	public Crew(String name, double paid, String department){
 		super(name, paid);
 		_department = department;
 	}
-
 
 
 	// Getters + Setters

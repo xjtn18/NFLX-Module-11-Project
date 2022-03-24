@@ -13,7 +13,6 @@ public class Movie {
 	private double _budget, _money_spent, _money_earned, _profit;
 
 
-
 	// Methods
 
 	public Movie(String genre, Director director, List<Actor> actors, List<Crew> crew, double budget, double money_earned){
@@ -46,7 +45,6 @@ public class Movie {
 			_money_spent += c.getEarned();
 		}
 	}
-
 
 
 	// Getters + Setters
