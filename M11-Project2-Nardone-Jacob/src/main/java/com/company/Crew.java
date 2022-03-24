@@ -19,8 +19,8 @@ public class Crew extends Person {
 
 	// Getters + Setters
 
-	public void setDepartment(String department)	{ _department = department; }
+	public void setDepartment(String department) { _department = department; }
 	
-	public String getDepartment()						{ return _department; }
+	public String getDepartment() { return _department; }
 
 }

@@ -25,13 +25,13 @@ public class Person {
 
 	// Getters and Setters
 
-	public void setName(String name)			{ _name = name; }
-	public void setPaid(double paid)			{ _paid = paid; }
-	public void setEarned(double earned)	{ _earned = earned; }
+	public void setName(String name) { _name = name; }
+	public void setPaid(double paid) { _paid = paid; }
+	public void setEarned(double earned) { _earned = earned; }
 
-	public String getName()						{ return _name; }
-	public double getPaid()						{ return _paid; }
-	public double getEarned()					{ return _earned; }
+	public String getName() { return _name; }
+	public double getPaid() { return _paid; }
+	public double getEarned() { return _earned; }
 
 
 

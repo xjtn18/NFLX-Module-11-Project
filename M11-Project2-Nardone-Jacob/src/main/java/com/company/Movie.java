@@ -54,19 +54,19 @@ public class Movie {
 
 	// Getters + Setters
 
-	public void setGenre(String genre)				{ _genre = genre; }
-	public void setDirector(Director director)	{ _director = director; }
-	public void setActors(List<Actor> actors)		{ _actors = actors; }
-	public void setCrew(List<Crew> crew)			{ _crew = crew; }
-	public void setBudget(double budget)			{ _budget = budget; }
+	public void setGenre(String genre) { _genre = genre; }
+	public void setDirector(Director director) { _director = director; }
+	public void setActors(List<Actor> actors) { _actors = actors; }
+	public void setCrew(List<Crew> crew) { _crew = crew; }
+	public void setBudget(double budget) { _budget = budget; }
 
-	public String getGenre()							{ return _genre; }
-	public Director getDirector()						{ return _director; }
-	public List<Actor> getActors()					{ return _actors; }
-	public List<Crew> getCrew()						{ return _crew; }
-	public double getBudget()							{ return _budget; }
-	public double getMoneySpent()						{ return _money_spent; }
-	public double getMoneyEarned()					{ return _money_earned; }
-	public double getProfit()							{ return _profit; }
+	public String getGenre() { return _genre; }
+	public Director getDirector() { return _director; }
+	public List<Actor> getActors() { return _actors; }
+	public List<Crew> getCrew() { return _crew; }
+	public double getBudget() { return _budget; }
+	public double getMoneySpent() { return _money_spent; }
+	public double getMoneyEarned() { return _money_earned; }
+	public double getProfit() { return _profit; }
 
 }
