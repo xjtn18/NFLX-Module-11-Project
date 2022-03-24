@@ -33,6 +33,4 @@ public class Person {
 	public double getPaid() { return _paid; }
 	public double getEarned() { return _earned; }
 
-
-
 }
