@@ -21,7 +21,7 @@ public class Director extends Crew {
 
 	// Getters + Setters
 	
-	public void setRoyalties(double royalty_percentage) { _royalty_percentage = royalty_percentage; }
+	public void setRoyaltyPercentage(double royalty_percentage) { _royalty_percentage = royalty_percentage; }
 	public double getRoyaltyPercentage() { return _royalty_percentage; }
 
 }
