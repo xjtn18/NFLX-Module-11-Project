@@ -3,15 +3,24 @@ package com.company;
 
 public class Actor extends Person {
 
-	public Actor(String name, double paid, double earned, String role){
-		super(name, paid, earned);
+	// Attributes
+	private String _role;
+
+
+
+	// Methods
+
+	public Actor(String name, double paid, String role){
+		super(name, paid);
 		_role = role;
 	}
 
 
 
-	// Private members
+	// Getters + Setters
 
-	private String _role;
+	public void setRole(String role)	{ _role = role; }
+	
+	public String getRole()						{ return _role; }
 
 }

@@ -7,37 +7,41 @@ import java.util.Arrays;
 
 public class Main 
 {
-	public static void main( String[] args ) {
-		Person person = new Person("Chris", 50.0, 100.0);
+	public static void main(String[] args) {
+		// instantiate a random person
+		Person person = new Person("Jacob", 100);
+
+		// instantiate the director and the production assistant
+		Director director = new Director("Steve Carell", 325000);
+		PA pa = new PA("Emily", 65, 480);
 
 		// Put our actors in a container
 		List<Actor> actors = new ArrayList<Actor>(Arrays.asList(
-			new Actor("Zack Woods", 50.0, 100.0, "Lead Actor"),
-			new Actor("Anne Hathaway", 50.0, 100.0, "Supporting Actress"),
-			new Actor("Zoe Kravits", 50.0, 100.0, "Supporting Actress"),
-			new Actor("Constance Wu", 50.0, 100.0, "Supporting Actress")
+			new Actor("Zack Woods", 1000000, "Lead Actor"),
+			new Actor("Anne Hathaway", 500000, "Supporting Actress"),
+			new Actor("Zoe Kravits", 500000, "Supporting Actress"),
+			new Actor("Constance Wu", 500000, "Supporting Actress")
 		));
 
-		// Put our crew members into a container
+		// Put our crew members into a container, along with the director and PA
 		List<Crew> crew = new ArrayList<Crew>(Arrays.asList(
-			new Crew("John", 50.0, 50.0, "Script Writing"),
-			new Crew("Leon", 50.0, 50.0, "Visual Effects"),
-			new Crew("Sammy", 50.0, 50.0, "Makeup"),
-			new Crew("Jade", 50.0, 50.0, "Craft Services")
+			new Crew("John", 180000, "Script Writing"),
+			new Crew("Leon", 110000, "Visual Effects"),
+			new Crew("Sammy", 75000, "Makeup"),
+			new Crew("Jade", 50000, "Craft Services"),
+			director,
+			pa
 		));
 
-		PA pa = new PA("Emily", 100.0, 0.0, 20.0);
+		// Instatiate our movie
+		Movie movie = new Movie("Comedy", director, actors, crew, 5000000, 6000000);
 
-		Director director = new Director("Steve Carell", 300.0, 0.0);
+		movie.Payday(); // pay everyone and calculate total profit
 
-		Movie movie = new Movie("Comedy", director, actors, crew, 155000);
-
-
-		System.out.println();
-
-
-
-
-		System.out.println("\nRan successfully.\n");
+		// Print some outputs
+		System.out.printf("- The PA earned $%,.2f \n", pa.getEarned());
+		System.out.printf("- The movie cost $%,.2f with a $%,.2f budget\n", movie.getMoneySpent(), movie.getBudget());
+		System.out.printf("- The movie profited $%,.2f\n", movie.getProfit());
+		System.out.printf("- The director made $%,.2f in royalties\n", director.getEarned() - director.getPaid());
 	}
 }
