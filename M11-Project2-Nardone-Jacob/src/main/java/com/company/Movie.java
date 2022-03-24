@@ -54,7 +54,6 @@ public class Movie {
 	public void setActors(List<Actor> actors) { _actors = actors; }
 	public void setCrew(List<Crew> crew) { _crew = crew; }
 	public void setBudget(double budget) { _budget = budget; }
-
 	public String getGenre() { return _genre; }
 	public Director getDirector() { return _director; }
 	public List<Actor> getActors() { return _actors; }

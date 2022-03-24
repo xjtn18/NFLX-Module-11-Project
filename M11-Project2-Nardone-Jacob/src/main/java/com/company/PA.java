@@ -23,7 +23,6 @@ public class PA extends Crew {
 	// Getters + Setters
 
 	public void setHoursWorked(double hours_worked) { _hours_worked = hours_worked; }
-
 	public double getHoursWorked() { return _hours_worked; }
 
 }

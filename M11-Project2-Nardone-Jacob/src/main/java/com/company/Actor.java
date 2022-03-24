@@ -18,7 +18,6 @@ public class Actor extends Person {
 	// Getters + Setters
 
 	public void setRole(String role) { _role = role; }
-	
 	public String getRole() { return _role; }
 
 }
