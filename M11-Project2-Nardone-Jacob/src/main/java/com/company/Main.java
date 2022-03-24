@@ -8,14 +8,14 @@ import java.util.Arrays;
 public class Main 
 {
 	public static void main(String[] args) {
-		// instantiate a random person
+		// Instantiate a random person
 		Person person = new Person("Jacob", 100);
 
-		// instantiate the director and the production assistant
+		// Instantiate the director and the production assistant
 		Director director = new Director("Steve Carell", 325000);
 		PA pa = new PA("Emily", 65, 480);
 
-		// Put our actors in a container
+		// Put our actors into a container
 		List<Actor> actors = new ArrayList<Actor>(Arrays.asList(
 			new Actor("Zack Woods", 1000000, "Lead Actor"),
 			new Actor("Anne Hathaway", 500000, "Supporting Actress"),
@@ -36,7 +36,12 @@ public class Main
 		// Instatiate our movie
 		Movie movie = new Movie("Comedy", director, actors, crew, 5000000, 6000000);
 
-		movie.Payday(); // pay everyone and calculate total profit
+		// Pay all actors and crew
+		movie.Payday();
+		// Set the movie's profit
+		movie.calculateProfit(); 
+		// Pay director their bonus royalties	
+		director.payRoyalties(movie.getProfit(), 1);
 
 		// Print some outputs
 		System.out.printf("- The PA earned $%,.2f \n", pa.getEarned());

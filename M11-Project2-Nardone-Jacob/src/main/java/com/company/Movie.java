@@ -45,9 +45,6 @@ public class Movie {
 			c.pay();
 			_money_spent += c.getEarned();
 		}
-
-		calculateProfit(); // set the movie's profit
-		_director.payRoyalties(_profit, 1); // pay director their bonus royalties
 	}
 
 
