@@ -11,7 +11,7 @@ public class PA extends Crew {
 	// Methods
 
 	public PA(String name, double paid, double hours_worked){
-		super(name, paid, "General"); // PA wouldn't have a specific department
+		super(name, paid, "Production");
 		_hours_worked = hours_worked;
 	}
 
