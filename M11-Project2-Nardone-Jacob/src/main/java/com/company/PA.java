@@ -14,9 +14,12 @@ public class PA extends Crew {
 		_hours_worked = hours_worked;
 	}
 
+	/** Pays this person their income per pay period, returns that income */
 	@Override
-	public void pay(){
-		_earned += _paid * _hours_worked; // hourly pay multiplied by total hours
+	public double pay(){
+		double paid_total = _paid * _hours_worked; // hourly pay multiplied by total hours
+		_earned += paid_total;
+		return paid_total;
 	}
 
 

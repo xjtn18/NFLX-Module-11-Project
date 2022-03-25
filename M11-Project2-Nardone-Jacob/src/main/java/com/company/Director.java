@@ -14,8 +14,11 @@ public class Director extends Crew {
 		_royalty_percentage = royalty_percentage;
 	}
 
-	public void payRoyalties(double profit){
-		_earned += Math.max(0.0, (profit * (_royalty_percentage / 100))); // royalties can only be positive
+	/** Pay royalties to the director as a percentage of a given profit value, returns that royalty amount */
+	public double payRoyalties(double profit){
+		double royalty = Math.max(0.0, (profit * (_royalty_percentage / 100))); // royalties can only be positive
+		_earned += royalty;
+		return royalty;
 	}
 
 

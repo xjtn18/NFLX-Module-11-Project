@@ -15,9 +15,10 @@ public class Person {
 		_paid = paid;
 	}
 
-	public void pay(){
-		// pays this person their amount paid
+	/** Pays this person their income per pay period, returns that income */
+	public double pay(){
 		_earned += _paid;
+		return _paid;
 	}
 
 

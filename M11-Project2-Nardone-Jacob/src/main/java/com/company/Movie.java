@@ -27,7 +27,7 @@ public class Movie {
 
 	/** Updates the total movie profit */
 	public void calculateProfit(){
-		_profit = _money_earned - _money_spent;
+		_profit = _budget - _money_spent + _money_earned; // box office + any unspent budget (or - any overspent budget)
 	}
 
 
@@ -35,14 +35,12 @@ public class Movie {
 	public void Payday() {
 		// pay the actors
 		for (Actor a : _actors){
-			a.pay();
-			_money_spent += a.getEarned();
+			_money_spent += a.pay();
 		}
 
 		// pay the crew (includes the director and the PA)
 		for (Crew c : _crew){
-			c.pay();
-			_money_spent += c.getEarned();
+			_money_spent += c.pay();
 		}
 	}
 
@@ -54,6 +52,10 @@ public class Movie {
 	public void setActors(List<Actor> actors) { _actors = actors; }
 	public void setCrew(List<Crew> crew) { _crew = crew; }
 	public void setBudget(double budget) { _budget = budget; }
+	public void setMoneySpent(double money_spent) { _money_spent = money_spent; }
+	public void setMoneyEarned(double money_earned) { _money_earned = money_earned; }
+	public void setProfit(double profit) { _profit = profit; }
+
 	public String getGenre() { return _genre; }
 	public Director getDirector() { return _director; }
 	public List<Actor> getActors() { return _actors; }

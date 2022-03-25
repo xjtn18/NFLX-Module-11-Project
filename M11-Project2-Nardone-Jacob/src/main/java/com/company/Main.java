@@ -12,31 +12,31 @@ public class Main
 		Person person = new Person("Jacob", 100);
 
 		// Instantiate the director and the production assistant
-		Director director = new Director("Steve Carell", 325000, 1);
-		PA pa = new PA("Emily", 70, 480);
+		Director director = new Director("Steve Carell", 54166.66, 1);
+		PA pa = new PA("Emily", 70, 80);
 
 		// Put our actors into a container
 		List<Actor> actors = new ArrayList<Actor>(Arrays.asList(
-			new Actor("Zack Woods", 20000000, "Protagonist"),
-			new Actor("Ryan Gosling", 15000000, "Best Friend"),
-			new Actor("Zoe Kravits", 15000000, "Love Interest"),
-			new Actor("Anne Hathaway", 15000000, "Sister"),
-			new Actor("Constance Wu", 10000000, "Professor")
+			new Actor("Zack Woods", 3333333.33, "Protagonist"),
+			new Actor("Ryan Gosling", 2500000, "Best Friend"),
+			new Actor("Zoe Kravits", 2500000, "Love Interest"),
+			new Actor("Anne Hathaway", 2500000, "Sister"),
+			new Actor("Constance Wu", 1666666.66, "Professor")
 		));
 
 		// Put our crew members into a container, along with the director and PA
 		List<Crew> crew = new ArrayList<Crew>(Arrays.asList(
-			new Crew("Michael", 120000, "Cinematography"),
-			new Crew("Preston", 120000, "Cinematography"),
-			new Crew("Jada", 110000, "Editing"),
-			new Crew("Leon", 110000, "Visual Effects"),
-			new Crew("Brian", 100000, "Script Writing"),
-			new Crew("John", 100000, "Script Writing"),
-			new Crew("Alina", 90000, "Sound"),
-			new Crew("Jared", 80000, "Lighting"),
-			new Crew("Samantha", 75000, "Hair & Makeup"),
-			new Crew("Edgar", 60000, "Transportation"),
-			new Crew("Cynthia", 40000, "Craft Services"),
+			new Crew("Michael", 20000, "Cinematography"),
+			new Crew("Preston", 20000, "Cinematography"),
+			new Crew("Jada", 18333.33, "Editing"),
+			new Crew("Leon", 18333.33, "Visual Effects"),
+			new Crew("Brian", 16666.66, "Script Writing"),
+			new Crew("John", 16666.66, "Script Writing"),
+			new Crew("Alina", 15000, "Sound"),
+			new Crew("Jared", 13333.33, "Lighting"),
+			new Crew("Samantha", 12500, "Hair & Makeup"),
+			new Crew("Edgar", 10000, "Transportation"),
+			new Crew("Cynthia", 6666.66, "Craft Services"),
 			director,
 			pa
 		));
@@ -44,17 +44,21 @@ public class Main
 		// Instatiate our movie
 		Movie movie = new Movie("Comedy", director, actors, crew, 80000000, 156000000);
 
-		// Pay all actors and crew
-		movie.Payday();
+		// Pay all actors and crew for 6 pay periods
+		for (int i = 0; i < 6; ++i){
+			movie.Payday();
+		}
+
 		// Calculate the movie's profit
 		movie.calculateProfit(); 
+
 		// Pay director their bonus royalties	
-		director.payRoyalties(movie.getProfit());
+		double royalty = director.payRoyalties(movie.getProfit());
 
 		// Print some outputs
 		System.out.printf("- The PA earned $%,.2f \n", pa.getEarned());
 		System.out.printf("- The movie cost $%,.2f with a $%,.2f budget\n", movie.getMoneySpent(), movie.getBudget());
 		System.out.printf("- The movie profited $%,.2f\n", movie.getProfit());
-		System.out.printf("- The director made $%,.2f in royalties\n", director.getEarned() - director.getPaid());
+		System.out.printf("- The director made $%,.2f in royalties\n", royalty);
 	}
 }
