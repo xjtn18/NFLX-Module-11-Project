@@ -12,7 +12,7 @@ public class Main
 		Person person = new Person("Jacob", 100);
 
 		// Instantiate the director and the production assistant
-		Director director = new Director("Steve Carell", 54166.66, 1);
+		Director director = new Director("Steve Carell", 54166.66);
 		PA pa = new PA("Emily", 70, 80);
 
 		// Put our actors into a container
@@ -52,8 +52,8 @@ public class Main
 		// Calculate the movie's profit
 		movie.calculateProfit(); 
 
-		// Pay director their bonus royalties	
-		double royalty = director.payRoyalties(movie.getProfit());
+		// Pay director their bonus royalties at 1%
+		double royalty = director.payRoyalties(movie.getProfit(), 1);
 
 		// Print some outputs
 		System.out.printf("- The PA earned $%,.2f \n", pa.getEarned());
